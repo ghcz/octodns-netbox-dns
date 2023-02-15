@@ -1,6 +1,6 @@
 """OctoDNS provider for NetboxDNS."""
 import logging
-from pprint import pprint
+#from pprint import pprint
 
 import dns.rdata
 import octodns.provider.base
@@ -203,7 +203,7 @@ class NetBoxDNSSource(octodns.provider.base.BaseProvider):
         for data in records.values():
             if len(data["values"]) == 1:
                 data["value"] = data.pop("values")[0]
-            pprint(data)
+            #pprint(data)
             record = octodns.record.Record.new(
                 zone=zone,
                 name=data["name"],
